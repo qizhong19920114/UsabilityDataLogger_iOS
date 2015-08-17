@@ -1,0 +1,9 @@
+Package: com.yourcompany.tweaktest3
+Name: tweaktest3
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Zhong Qi
+Author: Zhong Qi
+Section: Tweaks

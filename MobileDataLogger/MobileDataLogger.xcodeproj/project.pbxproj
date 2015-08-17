@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		051056AE1AE34C0E00AA885D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 051056AD1AE34C0E00AA885D /* Images.xcassets */; };
+		0541011A1AF56F88001E44C5 /* MDLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 054101191AF56F88001E44C5 /* MDLTableViewCell.m */; };
+		056B295A1AF9B012006FEFA1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 056B29591AF9B012006FEFA1 /* libsqlite3.dylib */; };
+		056B295D1AF9B2D8006FEFA1 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B295B1AF9B2D8006FEFA1 /* DBManager.m */; };
+		05D9BC371ADA1E8000146AC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D9BC361ADA1E8000146AC1 /* main.m */; };
+		05D9BC3A1ADA1E8000146AC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D9BC391ADA1E8000146AC1 /* AppDelegate.m */; };
+		05D9BC3D1ADA1E8000146AC1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D9BC3C1ADA1E8000146AC1 /* FirstViewController.m */; };
+		05D9BC401ADA1E8000146AC1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D9BC3F1ADA1E8000146AC1 /* SecondViewController.m */; };
+		05D9BC481ADA1E8100146AC1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D9BC461ADA1E8100146AC1 /* LaunchScreen.xib */; };
+		05D9BC541ADA1E8100146AC1 /* MobileDataLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D9BC531ADA1E8100146AC1 /* MobileDataLoggerTests.m */; };
+		05D9BC961ADB5DBD00146AC1 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D9BC951ADB5DBD00146AC1 /* ThirdViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05D9BC4E1ADA1E8100146AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05D9BC291ADA1E8000146AC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05D9BC301ADA1E8000146AC1;
+			remoteInfo = MobileDataLogger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		051056AD1AE34C0E00AA885D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		054101181AF56F88001E44C5 /* MDLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDLTableViewCell.h; sourceTree = "<group>"; };
+		054101191AF56F88001E44C5 /* MDLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDLTableViewCell.m; sourceTree = "<group>"; };
+		056B29591AF9B012006FEFA1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		056B295B1AF9B2D8006FEFA1 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		056B295C1AF9B2D8006FEFA1 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		05D9BC311ADA1E8000146AC1 /* MobileDataLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDataLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05D9BC351ADA1E8000146AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05D9BC361ADA1E8000146AC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		05D9BC381ADA1E8000146AC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		05D9BC391ADA1E8000146AC1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		05D9BC3B1ADA1E8000146AC1 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		05D9BC3C1ADA1E8000146AC1 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		05D9BC3E1ADA1E8000146AC1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		05D9BC3F1ADA1E8000146AC1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		05D9BC471ADA1E8100146AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		05D9BC4D1ADA1E8100146AC1 /* MobileDataLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDataLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05D9BC521ADA1E8100146AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05D9BC531ADA1E8100146AC1 /* MobileDataLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileDataLoggerTests.m; sourceTree = "<group>"; };
+		05D9BC951ADB5DBD00146AC1 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		05D9BC971ADB5E0100146AC1 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05D9BC2E1ADA1E8000146AC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				056B295A1AF9B012006FEFA1 /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05D9BC4A1ADA1E8100146AC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05D9BC281ADA1E8000146AC1 = {
+			isa = PBXGroup;
+			children = (
+				056B29591AF9B012006FEFA1 /* libsqlite3.dylib */,
+				05D9BC331ADA1E8000146AC1 /* MobileDataLogger */,
+				05D9BC501ADA1E8100146AC1 /* MobileDataLoggerTests */,
+				05D9BC321ADA1E8000146AC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05D9BC321ADA1E8000146AC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05D9BC311ADA1E8000146AC1 /* MobileDataLogger.app */,
+				05D9BC4D1ADA1E8100146AC1 /* MobileDataLoggerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05D9BC331ADA1E8000146AC1 /* MobileDataLogger */ = {
+			isa = PBXGroup;
+			children = (
+				056B295B1AF9B2D8006FEFA1 /* DBManager.m */,
+				056B295C1AF9B2D8006FEFA1 /* DBManager.h */,
+				05D9BC381ADA1E8000146AC1 /* AppDelegate.h */,
+				05D9BC391ADA1E8000146AC1 /* AppDelegate.m */,
+				05D9BC3B1ADA1E8000146AC1 /* FirstViewController.h */,
+				05D9BC3C1ADA1E8000146AC1 /* FirstViewController.m */,
+				05D9BC3E1ADA1E8000146AC1 /* SecondViewController.h */,
+				05D9BC3F1ADA1E8000146AC1 /* SecondViewController.m */,
+				054101181AF56F88001E44C5 /* MDLTableViewCell.h */,
+				054101191AF56F88001E44C5 /* MDLTableViewCell.m */,
+				05D9BC951ADB5DBD00146AC1 /* ThirdViewController.m */,
+				05D9BC971ADB5E0100146AC1 /* ThirdViewController.h */,
+				05D9BC461ADA1E8100146AC1 /* LaunchScreen.xib */,
+				051056AD1AE34C0E00AA885D /* Images.xcassets */,
+				05D9BC341ADA1E8000146AC1 /* Supporting Files */,
+			);
+			path = MobileDataLogger;
+			sourceTree = "<group>";
+		};
+		05D9BC341ADA1E8000146AC1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05D9BC351ADA1E8000146AC1 /* Info.plist */,
+				05D9BC361ADA1E8000146AC1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05D9BC501ADA1E8100146AC1 /* MobileDataLoggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				05D9BC531ADA1E8100146AC1 /* MobileDataLoggerTests.m */,
+				05D9BC511ADA1E8100146AC1 /* Supporting Files */,
+			);
+			path = MobileDataLoggerTests;
+			sourceTree = "<group>";
+		};
+		05D9BC511ADA1E8100146AC1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05D9BC521ADA1E8100146AC1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05D9BC301ADA1E8000146AC1 /* MobileDataLogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05D9BC571ADA1E8100146AC1 /* Build configuration list for PBXNativeTarget "MobileDataLogger" */;
+			buildPhases = (
+				05D9BC2D1ADA1E8000146AC1 /* Sources */,
+				05D9BC2E1ADA1E8000146AC1 /* Frameworks */,
+				05D9BC2F1ADA1E8000146AC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileDataLogger;
+			productName = MobileDataLogger;
+			productReference = 05D9BC311ADA1E8000146AC1 /* MobileDataLogger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05D9BC4C1ADA1E8100146AC1 /* MobileDataLoggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05D9BC5A1ADA1E8100146AC1 /* Build configuration list for PBXNativeTarget "MobileDataLoggerTests" */;
+			buildPhases = (
+				05D9BC491ADA1E8100146AC1 /* Sources */,
+				05D9BC4A1ADA1E8100146AC1 /* Frameworks */,
+				05D9BC4B1ADA1E8100146AC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05D9BC4F1ADA1E8100146AC1 /* PBXTargetDependency */,
+			);
+			name = MobileDataLoggerTests;
+			productName = MobileDataLoggerTests;
+			productReference = 05D9BC4D1ADA1E8100146AC1 /* MobileDataLoggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05D9BC291ADA1E8000146AC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Zhong Qi";
+				TargetAttributes = {
+					05D9BC301ADA1E8000146AC1 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = SH36TVPF7B;
+					};
+					05D9BC4C1ADA1E8100146AC1 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 05D9BC301ADA1E8000146AC1;
+					};
+				};
+			};
+			buildConfigurationList = 05D9BC2C1ADA1E8000146AC1 /* Build configuration list for PBXProject "MobileDataLogger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05D9BC281ADA1E8000146AC1;
+			productRefGroup = 05D9BC321ADA1E8000146AC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05D9BC301ADA1E8000146AC1 /* MobileDataLogger */,
+				05D9BC4C1ADA1E8100146AC1 /* MobileDataLoggerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05D9BC2F1ADA1E8000146AC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051056AE1AE34C0E00AA885D /* Images.xcassets in Resources */,
+				05D9BC481ADA1E8100146AC1 /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05D9BC4B1ADA1E8100146AC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05D9BC2D1ADA1E8000146AC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				056B295D1AF9B2D8006FEFA1 /* DBManager.m in Sources */,
+				05D9BC401ADA1E8000146AC1 /* SecondViewController.m in Sources */,
+				0541011A1AF56F88001E44C5 /* MDLTableViewCell.m in Sources */,
+				05D9BC961ADB5DBD00146AC1 /* ThirdViewController.m in Sources */,
+				05D9BC3A1ADA1E8000146AC1 /* AppDelegate.m in Sources */,
+				05D9BC3D1ADA1E8000146AC1 /* FirstViewController.m in Sources */,
+				05D9BC371ADA1E8000146AC1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05D9BC491ADA1E8100146AC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D9BC541ADA1E8100146AC1 /* MobileDataLoggerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05D9BC4F1ADA1E8100146AC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05D9BC301ADA1E8000146AC1 /* MobileDataLogger */;
+			targetProxy = 05D9BC4E1ADA1E8100146AC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05D9BC461ADA1E8100146AC1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05D9BC471ADA1E8100146AC1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05D9BC551ADA1E8100146AC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos8.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05D9BC561ADA1E8100146AC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos8.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05D9BC581ADA1E8100146AC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MobileDataLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		05D9BC591ADA1E8100146AC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MobileDataLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		05D9BC5B1ADA1E8100146AC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MobileDataLoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileDataLogger.app/MobileDataLogger";
+			};
+			name = Debug;
+		};
+		05D9BC5C1ADA1E8100146AC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MobileDataLoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileDataLogger.app/MobileDataLogger";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05D9BC2C1ADA1E8000146AC1 /* Build configuration list for PBXProject "MobileDataLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D9BC551ADA1E8100146AC1 /* Debug */,
+				05D9BC561ADA1E8100146AC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05D9BC571ADA1E8100146AC1 /* Build configuration list for PBXNativeTarget "MobileDataLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D9BC581ADA1E8100146AC1 /* Debug */,
+				05D9BC591ADA1E8100146AC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05D9BC5A1ADA1E8100146AC1 /* Build configuration list for PBXNativeTarget "MobileDataLoggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D9BC5B1ADA1E8100146AC1 /* Debug */,
+				05D9BC5C1ADA1E8100146AC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05D9BC291ADA1E8000146AC1 /* Project object */;
+}
