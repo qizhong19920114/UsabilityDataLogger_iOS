@@ -7,6 +7,5 @@ The majoy four functions are:
 - Record keyboard touches (keys and counts)
 - Record run time on each app
 - Record browse history on browsers 
-- 
 
 
