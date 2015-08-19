@@ -34,7 +34,7 @@ Install cydia tweak from tweaktest3_2 by running the upload.sh file or runing th
   
   ```
 
-Install syslogd from Cydia
+Install syslogd from Cydia. Also create an empty syslog file for reseting syslog. Name this file rst_syslog and put in /var/log/ directory. 
 
 Install [deviceconsole](https://www.theiphonewiki.com/wiki/System_Log) on Mac device.   
   
@@ -43,4 +43,4 @@ Install [deviceconsole](https://www.theiphonewiki.com/wiki/System_Log) on Mac de
 Install the xcode project in MobileDataLogger folder. Make sure the device ID is profiled (registered) in the iOS developer account and the iOS version is set correctly. 
 
 ## Installation (SandBox Path)
-Need to change the SandBox Path in cydia tweak code to be able to find and modify data files. The biggest challenge of iOS jailbreak development is file operation. Directoreis of user applications and system applications are encoded with a sequence of numbers and letters and the sandbox sequence changes everytime the application re-installed. Therefore, certain sandbox sequence (for Usability Data Logger UI and for Pro Documents) need to be known and added to the tweak code. All other apps's data can be found by using the unix "find" command. 
+Need to change the SandBox Path in cydia tweak code to be able to find and modify data files. The biggest challenge of iOS jailbreak development is file operation. Directoreis of user applications and system applications are encoded with a sequence of numbers and letters and the sandbox sequence changes everytime the application re-installed. Therefore, certain sandbox sequence (for Usability Data Logger UI and for Pro Documents) need to be known and added to the tweak code. All other apps's data are accessed using the Unix "find" command. 
