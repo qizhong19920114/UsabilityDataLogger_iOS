@@ -20,6 +20,7 @@ Install OpenSSH from Cydia.
   - To test ssh on iphone, type 'ssh root@(your iPhone's IP address)' without the quotes or parentheses into the Terminal console and hit return. Enter the password 'alpine' and hit return. SSH is a good tool to debug the code, especially to check if there is any file missing. 
   
 Install cydia tweak from tweaktest3_2 by running the upload.sh file or runing the shell command as shown below.Make sure to change the IP to the IP of your iPhone. The iPhone will re-spring after installation of tweak. Check if tweak is successfully installed by going to 'Installed' tab of Cydia and see if 'UsabilityDataLogger' tweak is in the list. 
+
   ```
   #!/bin/sh
 
@@ -30,5 +31,13 @@ Install cydia tweak from tweaktest3_2 by running the upload.sh file or runing th
   make package install
   
   ```
-## Installation (User Interface)
 
+Install syslog from Cydia
+
+Install deviceconsole on MacBook 
+  
+  
+## Installation (User Interface)
+Install the xcode project in MobileDataLogger folder
+
+## Installation (SandBox Path)
