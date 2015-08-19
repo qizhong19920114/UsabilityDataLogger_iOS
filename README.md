@@ -13,6 +13,7 @@ The majoy four functions are:
   
   Install Cydia. 
   
-  Install OpenSSH from Cydia.  
+  Install OpenSSH from Cydia. 
+  - To test ssh on iphone, type 'ssh root@(your iPhone's IP address)' without the quotes or parentheses into the Terminal console and hit return. Enter the password 'alpine' and hit return. 
 
 
