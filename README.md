@@ -8,7 +8,7 @@ The majoy four functions are:
 - Record run time on each app
 - Record browse history on browsers 
 
-## Installation 
+## Installation (Cydia Tweak)
   Jail break the device. Nees to be iOS8 or above. 
   
   Install Cydia. 
@@ -27,5 +27,5 @@ Install cydia tweak from tweaktest3_2 by running the upload.sh file or runing th
   make package install
   
   ```
-
+## Installation (User Interface)
 
