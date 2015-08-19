@@ -15,5 +15,17 @@ The majoy four functions are:
   
   Install OpenSSH from Cydia. 
   - To test ssh on iphone, type 'ssh root@(your iPhone's IP address)' without the quotes or parentheses into the Terminal console and hit return. Enter the password 'alpine' and hit return. SSH is a good tool to debug the code, especially to check if there is any file missing. 
+  
+  Install cydia tweak from tweaktest3_2 by running the upload.sh file (make sure to change the IP to the IP of your iPhone)
+  ```
+  #!/bin/sh
+
+  make
+  make package 
+  export THEOS_DEVICE_IP=192.168.1.72
+  
+  make package install
+  
+  ```
 
 
