@@ -9,6 +9,8 @@ The majoy four functions are:
 - Record browse history on browsers 
 
 ## Installation 
-
+  Jail break the device. Nees to be iOS8 or above. 
+  Install Cydia. 
+  Install OpenSSH from Cydia.  
 
 
