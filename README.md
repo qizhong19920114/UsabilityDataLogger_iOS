@@ -8,4 +8,7 @@ The majoy four functions are:
 - Record run time on each app
 - Record browse history on browsers 
 
+## Installation 
+
+
 
