@@ -34,10 +34,11 @@ Install cydia tweak from tweaktest3_2 by running the upload.sh file or runing th
 
 Install syslog from Cydia
 
-Install deviceconsole on MacBook 
+Install deviceconsole on Mac device.  
   
   
 ## Installation (User Interface)
 Install the xcode project in MobileDataLogger folder
 
 ## Installation (SandBox Path)
+Need to change the SandBox Path in cydia tweak code to be able to find and modify data files. 
