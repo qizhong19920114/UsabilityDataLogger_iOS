@@ -21,6 +21,8 @@ Install OpenSSH from Cydia.
   
 Install cydia tweak from tweaktest3_2 by running the upload.sh file or runing the shell command as shown below.Make sure to change the IP to the IP of your iPhone. The iPhone will re-spring after installation of tweak. Check if tweak is successfully installed by going to 'Installed' tab of Cydia and see if 'UsabilityDataLogger' tweak is in the list. 
 
+(Make sure cydia is turned off when using upload.sh script)
+
   ```
   #!/bin/sh
 
@@ -38,7 +40,7 @@ Install [deviceconsole](https://www.theiphonewiki.com/wiki/System_Log) on Mac de
   
   
 ## Installation (User Interface)
-Install the xcode project in MobileDataLogger folder
+Install the xcode project in MobileDataLogger folder. Make sure the device ID is profiled (registered) in the iOS developer account and the iOS version is set correctly. 
 
 ## Installation (SandBox Path)
-Need to change the SandBox Path in cydia tweak code to be able to find and modify data files. 
+Need to change the SandBox Path in cydia tweak code to be able to find and modify data files. The biggest challenge of iOS jailbreak development is file operation. Directoreis of user applications and system applications are encoded with a sequence of numbers and letters and the sandbox sequence changes everytime the application re-installed. Therefore, certain sandbox sequence (for Usability Data Logger UI and for Pro Documents) need to be known and added to the tweak code. All other apps's data can be found by using the unix "find" command. 
