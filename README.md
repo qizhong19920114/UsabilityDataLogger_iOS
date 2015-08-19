@@ -10,7 +10,9 @@ The majoy four functions are:
 
 ## Installation 
   Jail break the device. Nees to be iOS8 or above. 
+  
   Install Cydia. 
+  
   Install OpenSSH from Cydia.  
 
 
