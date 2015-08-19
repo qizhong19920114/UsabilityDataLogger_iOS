@@ -14,9 +14,9 @@ The majoy four functions are:
   - iOS firmware can be found in http://www.iphonehacks.com/download-iphone-ios-firmware
   - Install firmware by going to iTune and restore the iphone using firmware
   
-  Install Cydia. 
+Install Cydia. 
   
-  Install OpenSSH from Cydia. 
+Install OpenSSH from Cydia. 
   - To test ssh on iphone, type 'ssh root@(your iPhone's IP address)' without the quotes or parentheses into the Terminal console and hit return. Enter the password 'alpine' and hit return. SSH is a good tool to debug the code, especially to check if there is any file missing. 
   
 Install cydia tweak from tweaktest3_2 by running the upload.sh file or runing the shell command as shown below.Make sure to change the IP to the IP of your iPhone. The iPhone will re-spring after installation of tweak. Check if tweak is successfully installed by going to 'Installed' tab of Cydia and see if 'UsabilityDataLogger' tweak is in the list. 
