@@ -51,7 +51,7 @@ Open deviceconsole on your Macbook terminal. Open the application on your mobile
 ```
 Aug 19 23:25:16 iPad29 MobileDataLogger[2123] <Warning>: MobileDataLogger_filepath: /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents
 ```
-###Step2: find out the file path of Documents Pro (which will be the place all the exported data are saved at)
+###Step2: find out the file path of Documents Pro 
 
 ## Testing the app
 Here comes our testing drive. Please fasten your seat belt. 
