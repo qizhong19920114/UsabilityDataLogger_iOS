@@ -55,7 +55,7 @@ Aug 19 23:25:16 iPad29 MobileDataLogger[2123] <Warning>: MobileDataLogger_filepa
 
 ### need to chmod on the Application folder....
 
-
+### need to install keyboard and capture the keyboard file path...
 
 ## Testing the app
 Here comes our testing drive. Please fasten your seat belt. 
