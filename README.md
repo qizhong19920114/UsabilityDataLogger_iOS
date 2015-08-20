@@ -48,3 +48,8 @@ Need to change the SandBox Path in cydia tweak code to be able to find and modif
 ## Testing the app
 Here comes our testing drive. Please fasten your seat belt. 
 ###Step1: find out the file path of Mobile Data Logger app. 
+Open deviceconsole on your Macbook terminal. Open the application on your mobile device. Go to Recording tab and click on "start button". The file path should be shown in the terminal. For example, you should see a line similar to the line below. The file path of the app in this example is /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297. And the sandbox sequence is 2437026F-3995-48EB-B2A3-86B3ECC01297.  (make sure you write this down because you will need this for the tweak source code)
+
+```
+Aug 19 23:25:16 iPad29 MobileDataLogger[2123] <Warning>: MobileDataLogger_filepath: /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents
+```
