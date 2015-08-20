@@ -45,11 +45,14 @@ Install the xcode project in MobileDataLogger folder. Make sure the device ID is
 ## Installation part 3 (SandBox Path)
 Need to change the SandBox Path in cydia tweak code to be able to find and modify data files. The biggest challenge of iOS jailbreak development is file operation. Directoreis of user applications and system applications are encoded with a sequence of numbers and letters and the sandbox sequence changes everytime the application re-installed. Therefore, certain sandbox sequence (for Usability Data Logger UI and for Pro Documents) need to be known and added to the tweak code. All other apps's data are accessed using the Unix "find" command. 
 
-## Testing the app
-Here comes our testing drive. Please fasten your seat belt. 
 ###Step1: find out the file path of Mobile Data Logger app. 
 Open deviceconsole on your Macbook terminal. Open the application on your mobile device. Go to Recording tab and click on "start button". The file path should be shown in the terminal. For example, you should see a line similar to the line below. The file path of the app in this example is /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297. And the sandbox sequence is 2437026F-3995-48EB-B2A3-86B3ECC01297.  (make sure you write this down because you will need this for the tweak source code)
 
 ```
 Aug 19 23:25:16 iPad29 MobileDataLogger[2123] <Warning>: MobileDataLogger_filepath: /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents
 ```
+###Step2: find out the file path of Documents Pro (which will be the place all the exported data are saved at)
+
+## Testing the app
+Here comes our testing drive. Please fasten your seat belt. 
+
