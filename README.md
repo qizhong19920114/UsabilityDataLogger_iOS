@@ -47,4 +47,4 @@ Need to change the SandBox Path in cydia tweak code to be able to find and modif
 
 ## Testing the app
 Here comes our testing drive. Please fasten your seat belt. 
-
+###Step1: find out the file path of Mobile Data Logger app. 
