@@ -53,6 +53,10 @@ Aug 19 23:25:16 iPad29 MobileDataLogger[2123] <Warning>: MobileDataLogger_filepa
 ```
 ###Step2: find out the file path of Documents Pro 
 
+### need to chmod on the Application folder....
+
+
+
 ## Testing the app
 Here comes our testing drive. Please fasten your seat belt. 
 
