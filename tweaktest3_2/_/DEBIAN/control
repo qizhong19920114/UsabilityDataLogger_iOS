@@ -1,10 +1,10 @@
-Package: com.yourcompany.tweaktest3
-Name: tweaktest3
+Package: net.ueseo.UsabilityDataLogger
+Name: UsabilityDataLogger
 Depends: mobilesubstrate
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: This is a tweak for UsabilityDataLogger
 Maintainer: Zhong Qi
 Author: Zhong Qi
 Section: Tweaks
-Version: 0.0.1-930
+Version: 1.0-18
 Installed-Size: 28

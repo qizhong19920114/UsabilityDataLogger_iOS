@@ -45,6 +45,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 NSInteger counter = 0;
 - (IBAction)buttonPress {
     
@@ -76,8 +77,6 @@ NSInteger counter = 0;
                                encoding:NSUTF8StringEncoding
                                   error:nil];
     
-    
-    
     if (counter == 0 )
     {
         [self.buttonLabel setText:@"Recording"];
@@ -88,11 +87,6 @@ NSInteger counter = 0;
         //Class LSApplicationWorkspace_class = objc_getClass("LSApplicationWorkspace");
         //NSObject* workspace = [LSApplicationWorkspace_class performSelector:@selector(defaultWorkspace)];
         //NSLog(@"apps: %@", [workspace performSelector:@selector(allApplications)]);
-
-        
-                
-                            
-       
         
         //create content - four lines of text
         NSString *content = @"recording";
@@ -111,6 +105,8 @@ NSInteger counter = 0;
                                       error:&error];
         
         NSLog(@"Success = %d, error = %@", success, error);
+        
+        NSLog(@"MobileDataLogger_filepath: %@", documentsDirectory); 
         
         
     }
@@ -137,8 +133,6 @@ NSInteger counter = 0;
 - (IBAction)recordButtonPress {
     
     //NSLog(@"RECORD BUTTON PRESSED");
-    
-
     
     //get the file path
     NSError * error = nil;

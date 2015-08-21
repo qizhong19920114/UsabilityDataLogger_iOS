@@ -60,7 +60,7 @@ NSArray *sysAppArray =[NSArray arrayWithObjects: @"com.apple.PhotosViewService",
                           @"com.apple.WebSheet", @"com.apple.CoreAuthUI", @"com.apple.FacebookAccountMigrationDialog", 
                           @"com.apple.MusicUIService", @"om.apple.datadetectors.DDActionsService", 
                           @"com.apple.WebViewService", @"com.apple.gamecenter.GameCenterUIService", @"com.apple.InCallService",
-                          @"BJHStudios.iOSKeyboardTemplateContainer", @"com.apple.mobilecal.widget", 
+                          @"com.apple.mobilecal.widget", 
                           @"com.ueseo.MobileDataLogger", @"com.apple.springboard",@"BJHStudios.iOSKeyboardTemplateContainer.iOSKeyboardTemplate",
                           @"com.apple.mobilemail",
                           
@@ -142,7 +142,7 @@ NSArray *sysAppArray =[NSArray arrayWithObjects: @"com.apple.PhotosViewService",
                 NSLog(@"Success_start_photo write cnt = %d", success_photo);
             }
 
-            //Try to fix the Calender sandbox issue
+            //Try to fix the Calender sandbox issue 
             if([appID isEqualToString:@"com.apple.mobilecal"])
             {
                 //clear the touchcnt to 0 everytime launch the app
@@ -213,7 +213,7 @@ NSArray *sysAppArray =[NSArray arrayWithObjects: @"com.apple.PhotosViewService",
                     homekeypressvar = 0;
 
                     NSLog(@"homekeypressvar == 2 !!!!");
-                    BOOL fileExists1 = [[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/startRecord.txt"];
+                    BOOL fileExists1 = [[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/startRecord.txt"];
                     if (fileExists1)
                     {
                         NSLog(@"Start Record File exists!!!\n");
@@ -225,7 +225,7 @@ NSArray *sysAppArray =[NSArray arrayWithObjects: @"com.apple.PhotosViewService",
                         //Then remove the start recording signal file....
                         NSFileManager *fileManager = [NSFileManager defaultManager];
                 
-                        BOOL success = [fileManager removeItemAtPath:@"/var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/startRecord.txt" error:&error1];
+                        BOOL success = [fileManager removeItemAtPath:@"/var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/startRecord.txt" error:&error1];
                 
                         NSLog(@"remove signal file Success = %d, error = %@", success, error1);          
                     }
@@ -251,8 +251,8 @@ NSArray *sysAppArray =[NSArray arrayWithObjects: @"com.apple.PhotosViewService",
 
 
                     //To fix the case when entering the Notepad but only use keyboard and no touching other part. Make sure this is realapprouch as well
-                    system("find /var/mobile/Containers/Data/PluginKitPlugin/EE105DB4-8A24-4A36-A269-817C33FEBFDA/Documents/ -name 'realapptouch.txt' -exec cp {} /var/mobile/Documents/  \\;");
-                    system("find /var/mobile/Containers/Data/PluginKitPlugin/EE105DB4-8A24-4A36-A269-817C33FEBFDA/Documents/ -name 'realapptouch.txt' -exec rm -rf {} \\;");
+                    system("find /var/mobile/Containers/Data/PluginKitPlugin/214FB442-F2E3-432F-88B9-D8010FE834B6/Documents/ -name 'realapptouch.txt' -exec cp {} /var/mobile/Documents/  \\;");
+                    system("find /var/mobile/Containers/Data/PluginKitPlugin/214FB442-F2E3-432F-88B9-D8010FE834B6/Documents/ -name 'realapptouch.txt' -exec rm -rf {} \\;");
 
                    
                     BOOL  realapptouchExist = [[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Documents/realapptouch.txt"];
@@ -267,7 +267,7 @@ NSArray *sysAppArray =[NSArray arrayWithObjects: @"com.apple.PhotosViewService",
                         NSLog(@"remove signal file Success = %d, error = %@", success, error5);
 
                         //Fetch the keyboardstroke info
-                        NSString *fileNam = @"/var/mobile/Containers/Data/PluginKitPlugin/EE105DB4-8A24-4A36-A269-817C33FEBFDA/Documents/keystroke.txt" ; 
+                        NSString *fileNam = @"/var/mobile/Containers/Data/PluginKitPlugin/214FB442-F2E3-432F-88B9-D8010FE834B6/Documents/keystroke.txt" ; 
                         NSString *keystrokecountstr = [NSString stringWithContentsOfFile:fileNam encoding:NSUTF8StringEncoding error:nil];//fetch the file content
                         NSLog(@"MDL3: keystrokecountstr: %@\n", keystrokecountstr); 
                         //NSLog(@"RawData: keystrokes: %@\n", keystrokecountstr); 
@@ -306,7 +306,7 @@ NSArray *sysAppArray =[NSArray arrayWithObjects: @"com.apple.PhotosViewService",
                         NSError * error1 = nil; //error variable     
                         int keystrokecount_local=0; 
                         NSString *content1 = [NSString stringWithFormat:@"%d\n", keystrokecount_local];
-                        BOOL success1 = [content1 writeToFile:@"/var/mobile/Containers/Data/PluginKitPlugin/EE105DB4-8A24-4A36-A269-817C33FEBFDA/Documents/keystroke.txt" 
+                        BOOL success1 = [content1 writeToFile:@"/var/mobile/Containers/Data/PluginKitPlugin/214FB442-F2E3-432F-88B9-D8010FE834B6/Documents/keystroke.txt" 
                                                  atomically:NO 
                                                        encoding:NSUTF8StringEncoding 
                                                               error:&error1];
@@ -318,29 +318,29 @@ NSArray *sysAppArray =[NSArray arrayWithObjects: @"com.apple.PhotosViewService",
 
                         //system("cd /var/log/; cat /var/log/syslog | grep \"MDL\" > log");
 
-                        system("cd /var/log/; cat /var/log/syslog | grep \"MDL1\" > /var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/appName"); 
+                        system("cd /var/log/; cat /var/log/syslog | grep \"MDL1\" > /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/appName"); 
 
-                        system("cd /var/log/; cat /var/log/syslog | grep \"MDL2\" > /var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/touchCount");
+                        system("cd /var/log/; cat /var/log/syslog | grep \"MDL2\" > /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/touchCount");
 
-                        system("cd /var/log/; cat /var/log/syslog | grep \"MDL3\" > /var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/keyStoke");
+                        system("cd /var/log/; cat /var/log/syslog | grep \"MDL3\" > /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/keyStoke");
 
-                        system("cd /var/log/; cat /var/log/syslog | grep \"MDL4\" > /var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/endTime");
+                        system("cd /var/log/; cat /var/log/syslog | grep \"MDL4\" > /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/endTime");
 
                         
-                        system("cd /var/log/; cat /var/log/syslog | grep \"RawData\" > /var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/toBeFormated.txt");
-                        system("cd /var/log/; cat /var/log/syslog | grep \"RawData1\" > /var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/raw_data_runtime.txt");   
-                        system("cd /var/log/; cat /var/log/syslog | grep \"RawData2\" > /var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/raw_data_touch.txt");   
-                        system("cd /var/log/; cat /var/log/syslog | grep \"RawData3\" > /var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/raw_data_keystroke.txt"); 
+                        system("cd /var/log/; cat /var/log/syslog | grep \"RawData\" > /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/toBeFormated.txt");
+                        system("cd /var/log/; cat /var/log/syslog | grep \"RawData1\" > /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/raw_data_runtime.txt");   
+                        system("cd /var/log/; cat /var/log/syslog | grep \"RawData2\" > /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/raw_data_touch.txt");   
+                        system("cd /var/log/; cat /var/log/syslog | grep \"RawData3\" > /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/raw_data_keystroke.txt"); 
 
 
                         //copy the database file of safari to the MDL app folder
-                        system("cp /private/var/mobile/Containers/Data/Application/951D09B6-6492-40B9-9D14-3780693ECEDE/Library/Safari/History* /var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/");
+                        system("cp /private/var/mobile/Containers/Data/Application/C781CF8F-F7BD-423B-BC35-0B591DD3212B/Library/Safari/History* /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/");
                         //clear data broswer data
-                        system("rm /private/var/mobile/Containers/Data/Application/951D09B6-6492-40B9-9D14-3780693ECEDE/Library/Safari/History*");
+                        system("rm /private/var/mobile/Containers/Data/Application/C781CF8F-F7BD-423B-BC35-0B591DD3212B/Library/Safari/History*");
                     }  
                         
                         //This part copy the data to the record data to Document Pro (Export data)
-                        BOOL fileExists2 = [[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/exportButtonPressed.txt"];
+                        BOOL fileExists2 = [[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/exportButtonPressed.txt"];
                         if (fileExists2)
                         {
                             //Then remove the start recording signal file....
@@ -348,21 +348,21 @@ NSArray *sysAppArray =[NSArray arrayWithObjects: @"com.apple.PhotosViewService",
 
 
                 
-                            [fileManager removeItemAtPath:@"/var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/exportButtonPressed.txt" error:nil];
+                            [fileManager removeItemAtPath:@"/var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/exportButtonPressed.txt" error:nil];
 
                             //Put this outside of if real touch statement because this action needs to be done in MDL app which is excluded in real touch statement.
                             //The raw data should be saved in here: /var/mobile/Containers/Data/Application/2D1B0A69-8E7F-414D-9B90-964F7D9FE2FC/Documents 
                             //this is the place where Documents Pro files are stored. 
 
-                            system("mkdir -p /var/mobile/Containers/Data/Application/8F32EA63-04DA-4D6A-866E-C9865505173A/Documents/$(date +\"%m-%d-%y-%H-%M\");cp /var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/data* /var/mobile/Containers/Data/Application/8F32EA63-04DA-4D6A-866E-C9865505173A/Documents/$(date +\"%m-%d-%y-%H-%M\")/");                   
+                            system("mkdir -p /var/mobile/Containers/Data/Application/ED58B672-2E04-4103-8CF7-4F7BEA573B2F/Documents/$(date +\"%m-%d-%y-%H-%M\");cp /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/data* /var/mobile/Containers/Data/Application/ED58B672-2E04-4103-8CF7-4F7BEA573B2F/Documents/$(date +\"%m-%d-%y-%H-%M\")/");                   
                            
-                            BOOL fileExists_url_used_sig = [[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/url_used_sig.txt"];
+                            BOOL fileExists_url_used_sig = [[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/url_used_sig.txt"];
                     
                             if (fileExists_url_used_sig)
                             {
-                                system("mkdir -p /var/mobile/Containers/Data/Application/8F32EA63-04DA-4D6A-866E-C9865505173A/Documents/$(date +\"%m-%d-%y-%H-%M\"); cp /var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/url_data* /var/mobile/Containers/Data/Application/8F32EA63-04DA-4D6A-866E-C9865505173A/Documents/$(date +\"%m-%d-%y-%H-%M\")/"); 
+                                system("mkdir -p /var/mobile/Containers/Data/Application/ED58B672-2E04-4103-8CF7-4F7BEA573B2F/Documents/$(date +\"%m-%d-%y-%H-%M\"); cp /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/url_data* /var/mobile/Containers/Data/Application/ED58B672-2E04-4103-8CF7-4F7BEA573B2F/Documents/$(date +\"%m-%d-%y-%H-%M\")/"); 
                            
-                                [fileManager removeItemAtPath:@"/var/mobile/Containers/Data/Application/D10A5172-5A8A-4B1B-8EF4-14C74AF783A6/Documents/url_used_sig.txt" error:nil];
+                                [fileManager removeItemAtPath:@"/var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297/Documents/url_used_sig.txt" error:nil];
                             }
                        }
                  }
@@ -555,7 +555,7 @@ NSArray *sysAppArray =[NSArray arrayWithObjects: @"com.apple.PhotosViewService",
 
 
         //read the value 
-        NSString *fileNam = @"/var/mobile/Containers/Data/PluginKitPlugin/EE105DB4-8A24-4A36-A269-817C33FEBFDA/Documents/keystroke.txt" ; 
+        NSString *fileNam = @"/var/mobile/Containers/Data/PluginKitPlugin/214FB442-F2E3-432F-88B9-D8010FE834B6/Documents/keystroke.txt" ; 
         NSString *keystrokecountstr = [NSString stringWithContentsOfFile:fileNam encoding:NSUTF8StringEncoding error:nil];//fetch the file content
 
         keystrokecount = [keystrokecountstr integerValue];
@@ -577,7 +577,7 @@ NSArray *sysAppArray =[NSArray arrayWithObjects: @"com.apple.PhotosViewService",
         NSString *content = [NSString stringWithFormat:@"%d\n", keystrokecount_local];
 
 
-        BOOL success = [content writeToFile:@"/var/mobile/Containers/Data/PluginKitPlugin/EE105DB4-8A24-4A36-A269-817C33FEBFDA/Documents/keystroke.txt" 
+        BOOL success = [content writeToFile:@"/var/mobile/Containers/Data/PluginKitPlugin/214FB442-F2E3-432F-88B9-D8010FE834B6/Documents/keystroke.txt" 
                                  atomically:NO 
                                        encoding:NSUTF8StringEncoding 
                                               error:&error];

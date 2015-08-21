@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		051056AE1AE34C0E00AA885D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 051056AD1AE34C0E00AA885D /* Images.xcassets */; };
+		053F41471B844533008EE5F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053F41451B844533008EE5F5 /* Main.storyboard */; };
 		0541011A1AF56F88001E44C5 /* MDLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 054101191AF56F88001E44C5 /* MDLTableViewCell.m */; };
 		056B295A1AF9B012006FEFA1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 056B29591AF9B012006FEFA1 /* libsqlite3.dylib */; };
 		056B295D1AF9B2D8006FEFA1 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B295B1AF9B2D8006FEFA1 /* DBManager.m */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		051056AD1AE34C0E00AA885D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		053F41461B844533008EE5F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		054101181AF56F88001E44C5 /* MDLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDLTableViewCell.h; sourceTree = "<group>"; };
 		054101191AF56F88001E44C5 /* MDLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDLTableViewCell.m; sourceTree = "<group>"; };
 		056B29591AF9B012006FEFA1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -107,6 +109,7 @@
 				054101191AF56F88001E44C5 /* MDLTableViewCell.m */,
 				05D9BC951ADB5DBD00146AC1 /* ThirdViewController.m */,
 				05D9BC971ADB5E0100146AC1 /* ThirdViewController.h */,
+				053F41451B844533008EE5F5 /* Main.storyboard */,
 				05D9BC461ADA1E8100146AC1 /* LaunchScreen.xib */,
 				051056AD1AE34C0E00AA885D /* Images.xcassets */,
 				05D9BC341ADA1E8000146AC1 /* Supporting Files */,
@@ -221,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053F41471B844533008EE5F5 /* Main.storyboard in Resources */,
 				051056AE1AE34C0E00AA885D /* Images.xcassets in Resources */,
 				05D9BC481ADA1E8100146AC1 /* LaunchScreen.xib in Resources */,
 			);
@@ -269,6 +273,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		053F41451B844533008EE5F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				053F41461B844533008EE5F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		05D9BC461ADA1E8100146AC1 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
