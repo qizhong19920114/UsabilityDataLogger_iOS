@@ -1,9 +1,16 @@
 ###DeveloperNotes
 
-DEBUG: Aug-21-2015 14:17: Need to fix all the non-system icons;
-                          Data being recorded without start; 
-                          Need to accumulate data unless clear button being hit (can be done through syslogd);
-                          Data mismatch can be handled by using 'estimated data'. 
+DEBUG: Aug-21-2015 14:17: 
+
+- Need to fix all the non-system icons;
+                          
+- Data being recorded without start; 
+                          
+- Need to accumulate data unless clear button being hit (can be done through syslogd);
+
+- Data mismatch can be handled by using 'estimated data'. So the data is displayed tho it's not accurate. And we can use asterisk and note to remind user that it may because improper operation such as reopen app, using some system app and etc..
+
+
 
 TEST: Aug-21-2015 13:54: Test all the apps on iPad: DMPHG0CYDJ8R
       
