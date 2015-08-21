@@ -60,5 +60,7 @@ Aug 19 23:25:16 iPad29 MobileDataLogger[2123] <Warning>: MobileDataLogger_filepa
 ### need to cd to /Applications then chmod -R 777 to give permission to write data to Calender, Photo and Slideshow app. 
 
 ## Testing the app
-Here comes our testing drive. Please fasten your seat belt. 
+Here comes our testing drive. Please fasten your seat belt.
+
+On the 'Analysis' tab, in order to refresh, drag the page down to 1/4 of the screen and hold for 1 second before releasing. 
 
