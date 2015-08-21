@@ -12,7 +12,9 @@ DEBUG: Aug-21-2015 14:17:
 
 
 
-TEST: Aug-21-2015 13:54: Test all the apps on iPad: DMPHG0CYDJ8R
+TEST: Aug-21-2015 13:54: 
+
+Test all the apps on iPad: DMPHG0CYDJ8R. Video needs to be further tested, it shows Spring board on my test because there is no video downloaded; Newsstand and Music has the same problem; Mail and Tips won't record because they starts differntly by the system. 
       
 | App     | Test |
 | ------- | ---- |
@@ -46,4 +48,6 @@ TEST: Aug-21-2015 13:54: Test all the apps on iPad: DMPHG0CYDJ8R
 
       
 
-BUG: Aug-20-2015 22:02: Test Setting tab, RunTime showing as X even after re-enabled. 
+BUG: Aug-20-2015 22:02: 
+
+Test Setting tab, RunTime showing as X even after re-enabled. 
