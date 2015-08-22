@@ -14,7 +14,7 @@ BUG: Aug-21-2015 14:17:
 
 TEST: Aug-21-2015 13:54: 
 
-Test all the apps on iPad: DMPHG0CYDJ8R. Video needs to be further tested, it shows Spring board on my test because there is no video downloaded; Newsstand and Music has the same problem; Mail and Tips won't record because they starts differntly by the system. 
+Test all the apps on iPad: DMPHG0CYDJ8R. Video needs to be further tested, it shows Spring board on my test because there is no video downloaded; Newsstand and Music has the same problem; Mail and Tips won't record because they starts differntly by the system. Documents Pro is designed to not being recorded. 
       
 | App     | Test |
 | ------- | ---- |
