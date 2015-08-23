@@ -1,5 +1,27 @@
 ###DeveloperNotes
 
+BUG/Improvement: Aug-23-2015 13:00:
+
+- fix the tab name when scrolling down to the bottom 
+
+- The status text are not shown when scrolling down to the bottom 
+
+- Table row switching color so it looks better. 
+
+
+BUG (FIX): Aug-23-2015 12:56:
+
+- Add drag notice ("drag table to 1/4 of the screen to refresh")
+
+- Change all the text label to non-editable
+
+- Add special key recording for Keyboard (DELETE, RETURN, SPACE)
+
+- Fix the setting tab (signal files wasn't initialized)
+
+- Keep data in analysis tab unless Clear button is clicked. 
+
+
 BUG: Aug-21-2015 14:17: 
 
 - Need to fix all the non-system icons;
