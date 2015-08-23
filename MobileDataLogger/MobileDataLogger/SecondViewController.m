@@ -120,7 +120,7 @@
         
         [formatter setDateFormat:@"MMM d, h:mm a"];
         
-        NSString *title = [NSString stringWithFormat:@"Last update: %@", [formatter stringFromDate:[NSDate date]]];
+        NSString *title = [NSString stringWithFormat:@"Drag to 1/4 of the screen and hold for half second to update"];
         
         NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObject:[UIColor whiteColor]
                                                                     forKey:NSForegroundColorAttributeName];
@@ -149,7 +149,7 @@
     else
     {
         NSLog(@"Data Error!!! Please Restart the tester!");
-        [self.statusTestField setText:@"*Data may be incorrect due to improper operation"];
+        [self.statusTestField setText:@"* means improper operation occured and there could data missing"];
         //return 0; // change the number of rows here
         
         int smallestCNT=[tableData count];
@@ -249,7 +249,7 @@
     
    
     
-    cell.MDL_name.text = [[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] objectAtIndex:[[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] count]-1];
+
     
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -305,7 +305,17 @@
     
     }while([self calculateRunTime_int:start_Time forend:end_Time] < 0 );
     
-   
+    
+    // add a start to the app name when row shifter is used.
+    if (row_shifter == 0)
+    {
+        cell.MDL_name.text = [[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] objectAtIndex:[[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] count]-1];
+    }
+    else
+    {
+        cell.MDL_name.text = [[[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] objectAtIndex:[[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] count]-1] stringByAppendingString:@"*"];
+    }
+    
     
     if([[NSFileManager defaultManager] fileExistsAtPath:fileRunDisable])
     {
@@ -316,8 +326,9 @@
         
         NSLog(@"startTime: %@",start_Time);
         NSLog(@"endTime: %@",end_Time);
-        
+
         cell.MDL_time.text = [self calculateRunTime:start_Time forend:end_Time];
+
         
     }
     
@@ -335,11 +346,6 @@
     
     NSString* total_touchcnt_str = [NSString stringWithFormat:@"%i", total_touchcnt_int];
     
-    
-    
-    
-
-    
     //TOUCH
     if([[NSFileManager defaultManager] fileExistsAtPath:fileTouchDisable])
     {
@@ -347,7 +353,9 @@
     }
     else
     {
+
         cell.MDL_touch.text = total_touchcnt_str;
+
     }
     
     
@@ -375,13 +383,8 @@
     }
     else
     {
-        cell.MDL_url.text = @"NotApply";
+        cell.MDL_url.text = @" NotApply";
     }
-    
-   
-    
-    
-    
     
     return cell;
 }

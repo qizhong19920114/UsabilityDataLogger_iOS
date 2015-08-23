@@ -11,13 +11,13 @@
 
 #import "ThirdViewController.h"
 
-static int key_selected;
+static int key_selected = 1;
 
-static int url_selected;
+static int url_selected = 1;
 
-static int touch_selected;
+static int touch_selected = 1 ;
 
-static int runtime_selected;
+static int runtime_selected = 1;
 
 @interface ThirdViewController ()
 
@@ -255,6 +255,27 @@ static int runtime_selected;
             [fileMgr removeItemAtPath:[directory stringByAppendingPathComponent:filename] error:NULL];
         }
     }
+    
+    
+    //Create a clear Data indicator so that tweak can check it to see if syslogd needs to be reset.
+    NSString *fileName = [NSString stringWithFormat:@"%@/clearData.txt",
+                          documentsDirectory];
+    NSLog(@"%@", fileName);
+    NSError * error = nil;
+    //create content - four lines of text
+    NSString *content = @"clearData";
+    //save content to the documents directory
+    
+    BOOL success = [content writeToFile:fileName
+                             atomically:NO
+                               encoding:NSUTF8StringEncoding
+                                  error:&error];
+    
+    NSLog(@"Success = %d, error = %@", success, error);
+    
+    
+    
+    
 }
 @end
 

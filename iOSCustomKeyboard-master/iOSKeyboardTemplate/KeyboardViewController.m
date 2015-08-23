@@ -119,6 +119,11 @@
 
 -(IBAction) backspaceKeyPressed: (UIButton*) sender {
     
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    NSNumber *timeStampObj = [NSNumber numberWithDouble: timeStamp];
+    
+    NSLog(@"Hook_pressed: DELETE");
+    NSLog(@"RawData3: %@ key DELETE", timeStampObj);
     [self.textDocumentProxy deleteBackward];
 }
 
