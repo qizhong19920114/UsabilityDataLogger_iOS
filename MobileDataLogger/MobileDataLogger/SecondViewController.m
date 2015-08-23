@@ -149,8 +149,31 @@
     else
     {
         NSLog(@"Data Error!!! Please Restart the tester!");
-        [self.statusTestField setText:@"Data Mismatch! Please redo the test!"];
-        return 0; // change the number of rows here
+        [self.statusTestField setText:@"*Data may be incorrect due to improper operation"];
+        //return 0; // change the number of rows here
+        
+        int smallestCNT=[tableData count];
+        
+        if(smallestCNT > [tableData1 count])
+        {
+            smallestCNT=[tableData1 count];
+        }
+        
+        if(smallestCNT > [tableData2 count])
+        {
+            smallestCNT = [tableData2 count];
+        }
+        
+        if(smallestCNT > [tableData3 count])
+        {
+            smallestCNT = [tableData3 count];
+        }
+        
+        
+        
+        
+        return smallestCNT - 1; // still return with data even there is data mismatch
+                                                                                                        // get the lowest number of 4 table list count by using dividing
     }
     
 }
@@ -228,28 +251,94 @@
     
     cell.MDL_name.text = [[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] objectAtIndex:[[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] count]-1];
     
-    //Add the lines below because in the tweak, keystroke doesn't increase touchcnt, so i need to manually sum them up here
-    NSString *touchcnt_str = [[[tableData objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] objectAtIndex:[[[tableData objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] count]-1];
-    NSInteger touchcnt_int = [touchcnt_str integerValue];
-    NSString *keystroke_str = [[[tableData2 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] objectAtIndex:[[[tableData2 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] count]-1];
-    NSInteger keystroke_int = [keystroke_str integerValue];
-    NSInteger total_touchcnt_int = keystroke_int + touchcnt_int;
-    NSString* total_touchcnt_str = [NSString stringWithFormat:@"%i", total_touchcnt_int];
-    
-    
-    
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     
     NSString *fileTouchDisable = [NSString stringWithFormat:@"%@/slide_touch.txt",
-                           documentsDirectory];
+                                  documentsDirectory];
     NSString *fileRunDisable = [NSString stringWithFormat:@"%@/slide_run.txt",
-                                  documentsDirectory];
+                                documentsDirectory];
     NSString *fileKeystrokeDisable = [NSString stringWithFormat:@"%@/slide_key.txt",
-                                  documentsDirectory];
-    NSString *fileURLDisable = [NSString stringWithFormat:@"%@/slide_url.txt",
                                       documentsDirectory];
+    NSString *fileURLDisable = [NSString stringWithFormat:@"%@/slide_url.txt",
+                                documentsDirectory];
+    
+    
+    
+    
+    NSString* start_Time;
+    NSString* end_Time;
+    //RUNTIME
+    if ([[[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@" "] objectAtIndex:1] isEqualToString:@""])
+    {
+        start_Time = [[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@" "] objectAtIndex:3];
+        
+    }
+    else
+    {
+        start_Time = [[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@" "] objectAtIndex:2];
+    }
+    
+     NSLog(@"start_Time:%@",start_Time);
+    
+    int row_shifter = 0;
+    do // use a while loop to shift index when endTime - startTime is negative.
+    {
+        if ([[[[tableData3 objectAtIndex:(indexPath.row+row_shifter)] componentsSeparatedByString:@" "] objectAtIndex:1] isEqualToString:@""])
+        {
+            end_Time = [[[tableData3 objectAtIndex:(indexPath.row+row_shifter)] componentsSeparatedByString:@" "] objectAtIndex:3];
+            NSLog(@"EndTime:%@",end_Time);
+        }
+        else
+        {
+            end_Time = [[[tableData3 objectAtIndex:(indexPath.row+row_shifter)] componentsSeparatedByString:@" "] objectAtIndex:2];
+        }
+        
+        if ([self calculateRunTime_int:start_Time forend:end_Time] < 0)
+        {
+            row_shifter = row_shifter+ 1;
+            NSLog(@"Row Shifter: %i", row_shifter);
+        }
+        
+        
+    
+    }while([self calculateRunTime_int:start_Time forend:end_Time] < 0 );
+    
+   
+    
+    if([[NSFileManager defaultManager] fileExistsAtPath:fileRunDisable])
+    {
+        cell.MDL_time.text = @"X";
+    }
+    else
+    {
+        
+        NSLog(@"startTime: %@",start_Time);
+        NSLog(@"endTime: %@",end_Time);
+        
+        cell.MDL_time.text = [self calculateRunTime:start_Time forend:end_Time];
+        
+    }
+    
+    
+    //Add the lines below because in the tweak, keystroke doesn't increase touchcnt, so i need to manually sum them up here
+    NSString *touchcnt_str = [[[tableData objectAtIndex:(indexPath.row+row_shifter)] componentsSeparatedByString:@":"] objectAtIndex:[[[tableData objectAtIndex:(indexPath.row+row_shifter)] componentsSeparatedByString:@":"] count]-1];
+    
+    NSInteger touchcnt_int = [touchcnt_str integerValue];
+    
+    NSString *keystroke_str = [[[tableData2 objectAtIndex:(indexPath.row+row_shifter)] componentsSeparatedByString:@":"] objectAtIndex:[[[tableData2 objectAtIndex:(indexPath.row+row_shifter)] componentsSeparatedByString:@":"] count]-1];
+    
+    NSInteger keystroke_int = [keystroke_str integerValue];
+    
+    NSInteger total_touchcnt_int = keystroke_int + touchcnt_int;
+    
+    NSString* total_touchcnt_str = [NSString stringWithFormat:@"%i", total_touchcnt_int];
+    
+    
+    
+    
+
     
     //TOUCH
     if([[NSFileManager defaultManager] fileExistsAtPath:fileTouchDisable])
@@ -268,7 +357,7 @@
     }
     else
     {
-        cell.MDL_key.text = [[[tableData2 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] objectAtIndex:[[[tableData2 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] count]-1];
+        cell.MDL_key.text = [[[tableData2 objectAtIndex:(indexPath.row+row_shifter)] componentsSeparatedByString:@":"] objectAtIndex:[[[tableData2 objectAtIndex:(indexPath.row+row_shifter)] componentsSeparatedByString:@":"] count]-1];
     }
     
     NSString *url_visit_str;
@@ -291,49 +380,7 @@
     
    
     
-    NSString* start_Time;
-    NSString* end_Time;
-    //RUNTIME
     
-   
-    
-    if ([[[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@" "] objectAtIndex:1] isEqualToString:@""])
-    {
-        start_Time = [[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@" "] objectAtIndex:3];
-        
-    }
-    else
-    {
-        start_Time = [[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@" "] objectAtIndex:2];
-    }
-    
-    
-    if ([[[[tableData3 objectAtIndex:indexPath.row] componentsSeparatedByString:@" "] objectAtIndex:1] isEqualToString:@""])
-    {
-        end_Time = [[[tableData3 objectAtIndex:indexPath.row] componentsSeparatedByString:@" "] objectAtIndex:3];
-        //NSLog(@"end:%@",end_Time);
-    }
-    else
-    {
-         end_Time = [[[tableData3 objectAtIndex:indexPath.row] componentsSeparatedByString:@" "] objectAtIndex:2];
-    }
-    
-    
-   
-    
-    if([[NSFileManager defaultManager] fileExistsAtPath:fileRunDisable])
-    {
-        cell.MDL_time.text = @"X";
-    }
-    else
-    {
-        
-        NSLog(@"startTime: %@",start_Time);
-        NSLog(@"endTime: %@",end_Time);
-        
-        cell.MDL_time.text = [self calculateRunTime:start_Time forend:end_Time];
-        
-    }
     
     
     return cell;
@@ -364,6 +411,30 @@
     NSString *totoalRuntime = [NSString stringWithFormat:@"%d sec",totaltime];
    
     return totoalRuntime;
+}
+
+- (int)calculateRunTime_int:(NSString *)starttime forend: (NSString *)endtime{
+    
+    int start_min = [[[starttime componentsSeparatedByString:@":"] objectAtIndex:1] intValue];
+    
+    int start_sec = [[[starttime componentsSeparatedByString:@":"] objectAtIndex:2] intValue];
+    
+    int end_min = [[[endtime componentsSeparatedByString:@":"] objectAtIndex:1] intValue];
+    
+    int end_sec = [[[endtime componentsSeparatedByString:@":"] objectAtIndex:2] intValue];
+    
+    int totaltime = 0;
+    
+    if (end_min >= start_min)
+    {
+        totaltime = (end_min*60 + end_sec) - (start_min*60 + start_sec);
+    }
+    else
+    {
+        totaltime = ((end_min+60)*60 + end_sec) - (start_min*60 + start_sec);
+    }
+    
+    return totaltime;
 }
 
 - (void)didReceiveMemoryWarning {
