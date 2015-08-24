@@ -1,4 +1,8 @@
 ###DeveloperNotes
+
+BUG: Aug-24-2015 12:01: 
+- Need to make a Chinese version. 
+
 FIX: Aug-23-2015 10:52: 
 - Seperate the tableView from the viewController so that tab bar and status bar won't be scrolled off the screen 
 
