@@ -1,4 +1,8 @@
 ###DeveloperNotes
+FIX: Aug-23-2015 10:52: 
+- Seperate the tableView from the viewController so that tab bar and status bar won't be scrolled off the screen 
+
+- Add the background image, button images and tab icons
 
 BUG/Improvement: Aug-23-2015 13:00:
 
