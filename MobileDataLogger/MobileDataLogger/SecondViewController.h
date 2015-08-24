@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UITableViewController
+@interface SecondViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableViewObject;
 @property (weak, nonatomic) IBOutlet UITextField *statusTestField;
 
 @end

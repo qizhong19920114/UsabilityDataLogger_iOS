@@ -12,6 +12,13 @@
 		0541011A1AF56F88001E44C5 /* MDLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 054101191AF56F88001E44C5 /* MDLTableViewCell.m */; };
 		056B295A1AF9B012006FEFA1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 056B29591AF9B012006FEFA1 /* libsqlite3.dylib */; };
 		056B295D1AF9B2D8006FEFA1 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B295B1AF9B2D8006FEFA1 /* DBManager.m */; };
+		057380D11B8A7E6C00ED8B9F /* web_camera-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 057380D01B8A7E6C00ED8B9F /* web_camera-32.png */; };
+		057380D51B8AAD8000ED8B9F /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 057380D41B8AAD8000ED8B9F /* Blue.png */; };
+		05C09C9A1B8A7C6A00000547 /* settings-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 05C09C991B8A7C6A00000547 /* settings-32.png */; };
+		05C09C9C1B8A7C8D00000547 /* info-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 05C09C9B1B8A7C8D00000547 /* info-32.png */; };
+		05C09C9E1B8A7CB100000547 /* document-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 05C09C9D1B8A7CB100000547 /* document-32.png */; };
+		05C9CA991B8AB807004EB333 /* grey-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 05C9CA981B8AB807004EB333 /* grey-button-hi.png */; };
+		05C9CAA51B8AC0A3004EB333 /* gray-rectangle-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 05C9CAA41B8AC0A3004EB333 /* gray-rectangle-button-hi.png */; };
 		05D9BC371ADA1E8000146AC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D9BC361ADA1E8000146AC1 /* main.m */; };
 		05D9BC3A1ADA1E8000146AC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D9BC391ADA1E8000146AC1 /* AppDelegate.m */; };
 		05D9BC3D1ADA1E8000146AC1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D9BC3C1ADA1E8000146AC1 /* FirstViewController.m */; };
@@ -39,6 +46,13 @@
 		056B29591AF9B012006FEFA1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		056B295B1AF9B2D8006FEFA1 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		056B295C1AF9B2D8006FEFA1 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		057380D01B8A7E6C00ED8B9F /* web_camera-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "web_camera-32.png"; sourceTree = "<group>"; };
+		057380D41B8AAD8000ED8B9F /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue.png; sourceTree = "<group>"; };
+		05C09C991B8A7C6A00000547 /* settings-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-32.png"; sourceTree = "<group>"; };
+		05C09C9B1B8A7C8D00000547 /* info-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-32.png"; sourceTree = "<group>"; };
+		05C09C9D1B8A7CB100000547 /* document-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "document-32.png"; sourceTree = "<group>"; };
+		05C9CA981B8AB807004EB333 /* grey-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-button-hi.png"; sourceTree = "<group>"; };
+		05C9CAA41B8AC0A3004EB333 /* gray-rectangle-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray-rectangle-button-hi.png"; sourceTree = "<group>"; };
 		05D9BC311ADA1E8000146AC1 /* MobileDataLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDataLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D9BC351ADA1E8000146AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05D9BC361ADA1E8000146AC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +134,13 @@
 		05D9BC341ADA1E8000146AC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				05C9CAA41B8AC0A3004EB333 /* gray-rectangle-button-hi.png */,
+				05C9CA981B8AB807004EB333 /* grey-button-hi.png */,
+				057380D41B8AAD8000ED8B9F /* Blue.png */,
+				057380D01B8A7E6C00ED8B9F /* web_camera-32.png */,
+				05C09C9D1B8A7CB100000547 /* document-32.png */,
+				05C09C9B1B8A7C8D00000547 /* info-32.png */,
+				05C09C991B8A7C6A00000547 /* settings-32.png */,
 				05D9BC351ADA1E8000146AC1 /* Info.plist */,
 				05D9BC361ADA1E8000146AC1 /* main.m */,
 			);
@@ -224,7 +245,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057380D51B8AAD8000ED8B9F /* Blue.png in Resources */,
+				05C09C9E1B8A7CB100000547 /* document-32.png in Resources */,
+				05C9CA991B8AB807004EB333 /* grey-button-hi.png in Resources */,
 				053F41471B844533008EE5F5 /* Main.storyboard in Resources */,
+				057380D11B8A7E6C00ED8B9F /* web_camera-32.png in Resources */,
+				05C09C9C1B8A7C8D00000547 /* info-32.png in Resources */,
+				05C9CAA51B8AC0A3004EB333 /* gray-rectangle-button-hi.png in Resources */,
+				05C09C9A1B8A7C6A00000547 /* settings-32.png in Resources */,
 				051056AE1AE34C0E00AA885D /* Images.xcassets in Resources */,
 				05D9BC481ADA1E8100146AC1 /* LaunchScreen.xib in Resources */,
 			);

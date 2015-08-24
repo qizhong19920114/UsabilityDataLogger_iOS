@@ -17,6 +17,7 @@
 - (NSString *)calculateRunTime:(NSString *)starttime forend: (NSString *)endtime;
 
 @property (nonatomic, strong) DBManager *dbManager;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
@@ -37,13 +38,17 @@
     // Initialize the dbManager property.
     self.dbManager = [[DBManager alloc] initWithDatabaseFilename:@"History.db"];
     
-    // Initialize the refresh control.
+    
+    
     self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.backgroundColor = [UIColor purpleColor];
+    
+    // Initialize the refresh control.
+    self.refreshControl.backgroundColor = [UIColor blueColor];
     self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self
                             action:@selector(reloadDataMDL)
                   forControlEvents:UIControlEventValueChanged];
+    [self.tableViewObject addSubview:self.refreshControl]; //assumes tableView is @property
     
 }
 
@@ -109,7 +114,7 @@
 - (void)reloadData
 {
     // Reload table data
-    [self.tableView reloadData];
+    [self.tableViewObject reloadData];
     
     
     
@@ -200,6 +205,10 @@
     //NSLog(@"Count is: %d", [url_db count]);
 
     MDLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    //cell.backgroundColor = indexPath.row % 2
+   // ? [UIColor colorWithRed: 160.0 green: 160.0 blue: 160.0 alpha: 1.0]
+   // : [UIColor whiteColor];
 
     NSString* name = [[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] objectAtIndex:[[[tableData1 objectAtIndex:indexPath.row] componentsSeparatedByString:@":"] count]-1];
     
