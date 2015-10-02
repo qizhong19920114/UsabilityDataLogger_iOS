@@ -11,6 +11,7 @@ The majoy four functions are:
 ## Installation part 1 (Cydia Tweak)
   Jail break the device. Nees to be iOS8 or above. 
   - Downlaod [TaiG Jailbreak](http://www.taig.com) tool 
+  If  your ios version is not 8.3, do the following two steps; otherwise, you can skip it. 
   - Download iOS system (ios 8.3) [firmware](http://www.iphonehacks.com/download-iphone-ios-firmware)
   - Install firmware by going to iTune and restore the iphone using firmware
   
