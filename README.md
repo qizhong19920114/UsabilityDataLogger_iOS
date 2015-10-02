@@ -41,10 +41,10 @@ Install cydia tweak from tweaktest3_2 by running the upload.sh file or runing th
   ```
 
 Install syslogd from Cydia. Also create an empty syslog file for reseting syslog. Name this file rst_syslog and put in /var/log/ directory. Need to use chmod 777 syslog to change the permission of syslog file so that it can be overwritten by resetlog. The commands are below:
-ssh root@172.29.2.123
-cd /var/log
-cat >rst_syslog
-chmod 777 syslog
+- ssh root@172.29.2.123
+- cd /var/log
+- cat >rst_syslog
+- chmod 777 syslog
 
 Install [deviceconsole](https://www.theiphonewiki.com/wiki/System_Log) on Mac device.   
   
