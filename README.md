@@ -68,7 +68,8 @@ Aug 19 23:25:16 iPad29 MobileDataLogger[2123] <Warning>: MobileDataLogger_filepa
 ### need to chmod on the /var/mobile/Containers/Data/Application/ folder....
 
 ### need to install keyboard and capture the keyboard file path...
-
+ - use XCode to install it. 
+ - 
 ### need to cd to /Applications then chmod -R 777 to give permission to write data to Calender, Photo and Slideshow app. 
 
 ## Testing the app
