@@ -69,6 +69,10 @@ Aug 19 23:25:16 iPad29 MobileDataLogger[2123] <Warning>: MobileDataLogger_filepa
 
 ### need to install keyboard and capture the keyboard file path...
  - use XCode to install it. 
+ - We also need to change the sequence ID in the tweek.mx file. 
+ - To find the sequence ID of the keyboard, we need to set the customized keyboard as the default keyboard in the language setting. 
+ - then run the deviceconsole, find the sequence ID where it has PluginKitPlugin. The sequence ID after PluginKitPlugin is the ID for the keyboard. 
+ - replace the sequence ID in the tweek.mx with the sequence ID you just get. 
  
 ### need to cd to /Applications then chmod -R 777 to give permission to write data to Calender, Photo and Slideshow app. 
   - use "ssh root@192.131.250.025" to log in the ipad. 
