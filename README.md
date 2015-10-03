@@ -78,7 +78,8 @@ Aug 19 23:25:16 iPad29 MobileDataLogger[2123] <Warning>: MobileDataLogger_filepa
   - use "ssh root@192.131.250.025" to log in the ipad. 
   - the password is "alpine"
   - then run "chmod 777 /var/mobile/Containers/Data/Application/2437026F-3995-48EB-B2A3-86B3ECC01297" to give it all permissions. 
-  - 
+  - chmod -R 777 /Applications/
+  - ls -l /Applications/ to check the permission changes. (-l parameter is for details.)
 ## Testing the app
 Here comes our testing drive. Please fasten your seat belt.
 
