@@ -10,31 +10,31 @@
 	<string>iOSKeyboardTemplateContainer</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>FEBA7F4761ED4E804AC78D15BACB31A2F44D5B4F</key>
-		<string>https://github.com/bjhstudios/iOSCustomKeyboard.git</string>
+		<key>F857B59563EA01A5687F157BACD9B387CC62CE24</key>
+		<string>https://github.com/qizhong19920114/UsabilityDataLogger_iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iOSKeyboardTemplateContainer.xcodeproj</string>
+	<string>iOSCustomKeyboard-master/iOSKeyboardTemplateContainer.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>FEBA7F4761ED4E804AC78D15BACB31A2F44D5B4F</key>
-		<string>../..</string>
+		<key>F857B59563EA01A5687F157BACD9B387CC62CE24</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/bjhstudios/iOSCustomKeyboard.git</string>
+	<string>https://github.com/qizhong19920114/UsabilityDataLogger_iOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FEBA7F4761ED4E804AC78D15BACB31A2F44D5B4F</string>
+	<string>F857B59563EA01A5687F157BACD9B387CC62CE24</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FEBA7F4761ED4E804AC78D15BACB31A2F44D5B4F</string>
+			<string>F857B59563EA01A5687F157BACD9B387CC62CE24</string>
 			<key>IDESourceControlWCCName</key>
-			<string>iOSKeyboardTemplateContainer</string>
+			<string>UsabilityDataLogger_iOS</string>
 		</dict>
 	</array>
 </dict>

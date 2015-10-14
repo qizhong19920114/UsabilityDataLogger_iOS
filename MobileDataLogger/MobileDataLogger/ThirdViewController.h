@@ -14,8 +14,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *urlvisitSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *touchlocSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *appruntimeSwitch;
-@property (weak, nonatomic) IBOutlet UIButton *clearDataButton;
-- (IBAction)clearAllDataPressed;
 
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 

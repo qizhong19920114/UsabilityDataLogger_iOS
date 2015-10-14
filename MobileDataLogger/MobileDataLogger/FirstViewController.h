@@ -11,11 +11,11 @@
 @interface FirstViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
 @property (weak, nonatomic) IBOutlet UILabel *buttonLabel;
-@property (weak, nonatomic) IBOutlet UIButton *exportButton;
+
 
 - (IBAction)buttonPress;
 
-- (IBAction)recordButtonPress;
+
 
 @end
 

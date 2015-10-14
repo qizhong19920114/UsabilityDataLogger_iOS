@@ -240,43 +240,7 @@ static int runtime_selected = 1;
     }
 }
 
-- (IBAction)clearAllDataPressed {
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *directory = [NSString stringWithFormat:@"%@/",  documentsDirectory];
-    
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    NSArray *fileArray = [fileMgr contentsOfDirectoryAtPath:directory error:nil];
-    for (NSString *filename in fileArray)
-    {
-        if(![filename isEqualToString:@"slide_run.txt"]&& ![filename isEqualToString:@"slide_touch.txt"]&& ![filename isEqualToString:@"slide_url.txt"] && ![filename isEqualToString:@"slide_key.txt"] )
-        {
-            [fileMgr removeItemAtPath:[directory stringByAppendingPathComponent:filename] error:NULL];
-        }
-    }
-    
-    
-    //Create a clear Data indicator so that tweak can check it to see if syslogd needs to be reset.
-    NSString *fileName = [NSString stringWithFormat:@"%@/clearData.txt",
-                          documentsDirectory];
-    NSLog(@"%@", fileName);
-    NSError * error = nil;
-    //create content - four lines of text
-    NSString *content = @"clearData";
-    //save content to the documents directory
-    
-    BOOL success = [content writeToFile:fileName
-                             atomically:NO
-                               encoding:NSUTF8StringEncoding
-                                  error:&error];
-    
-    NSLog(@"Success = %d, error = %@", success, error);
-    
-    
-    
-    
-}
+
 @end
 
 

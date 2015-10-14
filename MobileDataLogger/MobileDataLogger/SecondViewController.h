@@ -12,6 +12,12 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableViewObject;
 @property (weak, nonatomic) IBOutlet UITextField *statusTestField;
 
+@property (weak, nonatomic) IBOutlet UIButton *clearDataButton;
+- (IBAction)clearAllDataPressed;
+
+@property (weak, nonatomic) IBOutlet UIButton *exportButton;
+- (IBAction)recordButtonPress;
+
 @end
 
 
