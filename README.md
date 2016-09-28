@@ -8,6 +8,8 @@ The majoy four functions are:
 - Record run time on each app
 - Record browse history on browsers 
 
+![](http://i.imgur.com/aah7GgP.jpg)
+
 ## Installation part 1 (Cydia Tweak)
   Jail break the device. Nees to be iOS8 or above. 
   - Downlaod [TaiG Jailbreak](http://www.taig.com) tool 
